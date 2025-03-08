@@ -1,0 +1,150 @@
+/* Global Styles */
+:root {
+  --background-color: #f4f4f4;
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --accent-color: #00b894;
+  --border-radius: 10px;
+  --font-family: 'Poppins', sans-serif;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.dashboard-header .date-time {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-buttons button {
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.pomodoro-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.games-button {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.study-room-button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.dashboard-buttons button:hover {
+  background-color: #555;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-top: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* To-Do List Section */
+.todo-container {
+  margin-top: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.todo-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Bubble Pop Game Styles */
+.bubble-pop-game {
+  position: relative;
+  width: 320px; /* Adjusted for better visibility */
+  height: 320px; /* Adjusted for better visibility */
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.bubble:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
