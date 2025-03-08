@@ -5,6 +5,8 @@ import { useState } from "react";
 import ClickSpeedGame from "./ClickSpeedGame";
 import MemoryGame from "./MemoryGame";
 import BubblePopGame from "./BubblePopGame";
+import SnakeGame from "./SnakeGame";
+import TargetShooterGame from "./TargetShooterGame";
 
 export default function Games() {
   const router = useRouter();
@@ -80,6 +82,8 @@ export default function Games() {
           {selectedGame === "click" && <ClickSpeedGame />}
           {selectedGame === "memory" && <MemoryGame />}
           {selectedGame === "bubble" && <BubblePopGame />}
+          {selectedGame === "snake" && <SnakeGame />}
+          {selectedGame === "target" && <TargetShooterGame />}
           <button
             onClick={() => setSelectedGame(null)}
             style={styles.backButton}
@@ -106,6 +110,18 @@ export default function Games() {
             style={styles.gameButton}
           >
             Bubble Pop Game
+          </button>
+          <button
+            onClick={() => setSelectedGame("snake")}
+            style={styles.gameButton}
+          >
+            Snake Game
+          </button>
+          <button
+            onClick={() => setSelectedGame("target")}
+            style={styles.gameButton}
+          >
+            Target Shooter Game
           </button>
         </div>
       )}
